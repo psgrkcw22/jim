@@ -1,0 +1,472 @@
+EMPLOYEE
+import java.util.Scanner;
+class Employee
+{
+int id;
+String name;
+float sal;
+}
+class Main {
+public static void main(String args[])
+{
+Scanner sc = new Scanner(System.in);
+    System.out.print("Enter how many employee:");
+    int k = sc.nextInt();
+    Employee emp[] = new Employee[k];
+    for (int i = 0; i < k; i++)
+    {
+        emp[i] = new Employee();
+        System.out.println("Enter " + (i + 1) + " Employee datas are");
+        System.out.print("Enter employee id :");
+        emp[i].id = sc.nextInt();
+        System.out.print("Enter employee name :");
+        emp[i].name = sc.next();
+        System.out.print("Enter employee salary :");
+        emp[i].sal = sc.nextFloat();
+        }
+        System.out.println("\n\n============ All employee details are :============\n");
+        for (int i = 0; i < k; i++) {
+        System.out.println("Employee id name and salary :" + emp[i].id +
+        " " + emp[i].name + " " + emp[i].sal);
+        }
+
+    }
+    }
+
+
+
+
+
+
+
+
+
+STRING
+import java.util.Scanner;
+public class SString{
+    public static void main(String[]args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter the First string(s1):" );
+        String s1=scanner.nextLine();
+        System.out.print("Enter the Second string(s2):" );
+        String s2=scanner.nextLine();
+        System.out.println("Lenght of s1 is:"+s1.length());
+        System.out.println("Lenght of s2 is:"+s2.length());
+        s1=s1.concat(s2);
+        System.out.println("Concatenation of s1 and s2 is:"+s1);
+        System.out.println("Upper case of s3:"+s1.toUpperCase());
+        System.out.println("Lower case of s3:"+s1.toLowerCase());
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+
+SORTING
+import java.util.Arrays;
+import java.util.Scanner;
+public class Sorting
+{
+public static void main(String[] args)
+{
+Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the number of elements in the array: ");
+    int arrayLength = scanner.nextInt();
+    int[] numbers = new int[arrayLength];
+    for (int i = 0; i < arrayLength; i++)
+    {
+    System.out.print("Enter element at index " + i + ": ");
+    numbers[i] = scanner.nextInt();
+    }
+    Arrays.sort(numbers);
+    System.out.println("Elements of array sorted in ascending order: ");
+    for (int i = 0; i < arrayLength; i++)
+    {
+    System.out.println(numbers[i]);
+    }
+
+}
+}
+
+
+
+
+
+
+
+
+AREA OF TRIANGLE
+import java.util.Scanner;
+class Rectangle {
+    private int length;
+    private int width;
+public Rectangle() {
+        length = 0;
+        width = 0;
+    }
+public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
+public int calculateArea() {
+        return length * width;
+    }
+}
+
+class Triangle {
+    private int base;
+    private int height;
+    public Triangle() {
+        base = 0;
+        height = 0;
+    }
+    public Triangle(int base, int height) {
+        this.base = base;
+        this.height = height;
+    }
+    public double calculateArea() {
+        return 0.5 * base * height;
+    }
+}
+
+public class Result {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter length for Rectangle:");
+        int length = scanner.nextInt();
+        System.out.print("Enter width for Rectangle:");
+        int width = scanner.nextInt();
+        Rectangle rectangle = new Rectangle(length, width);
+        System.out.print("Rectangle area:" + rectangle.calculateArea());
+        System.out.print("\nEnter base for Traingle:");
+        int base = scanner.nextInt();
+        System.out.print("Enter height for Triangle:");
+        int height = scanner.nextInt();
+        Triangle triangle = new Triangle(base, height);
+        System.out.print("Triangle area:" + triangle.calculateArea());
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+
+STUDENTS DETAILS USING INHERITANCE
+import java.util.Scanner;
+class StudentDetails {
+int roll_no;
+String name, cl;
+void input() {
+Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Roll Number: ");
+    roll_no = sc.nextInt(); 
+    sc.nextLine(); // => \n
+    System.out.print("Enter Name: ");
+    name = sc.nextLine();
+    System.out.print("Enter class: ");
+    cl = sc.nextLine();
+}
+}
+class Student extends StudentDetails {
+void display() {
+System.out.println("/*** Student details printed ****/");
+System.out.println("Roll Number is: " + roll_no);
+System.out.println("Your name is: " + name);
+System.out.println("Your class is: " + cl);
+}
+public static void main(String args[]) {
+Student S = new Student();
+S.input();
+S.display();
+}
+}
+
+
+
+
+
+
+
+
+
+NUMBER ADDITION
+import java.util.Scanner;
+class Addition {
+void addition(int a, int b) {
+int sum = a + b;
+System.out.println("Sum of two numbers is " + sum);
+}
+void addition(int a, int b, int c) {
+int sum = a + b + c;
+System.out.println("Sum of three numbers is " + sum);
+}
+public static void main(String args[]) {
+Addition add = new Addition();
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter X Value :");
+int x = sc.nextInt();
+System.out.print("Enter Y Value :");
+int y = sc.nextInt();
+System.out.print("Enter Z Value :");
+int z = sc.nextInt();
+add.addition(x, y, z);
+add.addition(x, y);
+}
+}
+
+
+
+
+
+
+
+
+PALINDROME
+Apalindrome.java                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  package palindromepack;
+import java.util.Scanner;
+public class Apalindrome {
+    public void msg() {
+        System.out.println("Hello");
+        int r, sum = 0, temp, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Any Number: "); 
+        n = sc.nextInt();
+        temp = n;
+        while (n > 0) {
+            r = n % 10; 
+            sum = (sum * 10) + r;
+            n = n / 10;
+        }
+        if (temp == sum)
+            System.out.println("palindrome number ");
+        else
+            System.out.println("not palindrome");
+    }
+}
+Bpalindrome.java                                                                                                                                                                                                           package palindromepack;
+class B {
+    public static void main(String args[]) {
+        Apalindrome obj = new Apalindrome();
+        obj.msg();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+STUDENT MARKSHEET
+import java.util.Scanner;
+interface StudentsInfo {
+int id = 141;
+String name = "John";
+String course = "BCA";
+}
+interface StudentsMarkInfo {
+int JAVA = 80;
+int CN = 87;
+int DEM = 99;
+int DM = 89;
+int MC = 58;
+}
+class Student implements StudentsInfo, StudentsMarkInfo {
+int total;
+int avg;
+void findSal() {
+total = JAVA + CN + DEM + DM + MC;
+avg = total / 5;
+System.out.println("-------------------STUDENT INFORMATION-----------");
+System.out.println("Student ID :" + id);
+System.out.println("Student Name :" + name);
+System.out.println("Student Course :" + course);
+System.out.println("-------------------STUDENT MARKSHEET-----------");
+System.out.println("JAVA Mark :" + JAVA);
+System.out.println("CN Mark :" + CN);
+System.out.println("DEM Mark :" + DEM);
+System.out.println("DM Mark :" + DM);
+System.out.println("MC Mark :" + MC);
+System.out.println("Total Marks :" + total);
+System.out.println("Average Mark :" + avg);
+}
+public static void main(String args[]) {
+Student ad = new Student();
+ad.findSal();
+}
+}
+
+
+
+
+
+
+
+
+
+EXCEPTION HANDLING
+import java.util.Scanner;
+public class Exception {
+    public static void main(String[] args) {
+        Scanner Scanner = new Scanner(System.in);
+        try {
+            System.out.println("Enter Numerator:");
+            int Numerator = Scanner.nextInt();
+            System.out.println("Enter Denominator:");
+            int Denominator = Scanner.nextInt();
+            int result = divide(Numerator,Denominator);
+            System.out.println("result:" + result);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("error:division by zero is not allowed.");
+        } finally {
+            System.out.println("finally block excuted");
+            Scanner.close();
+        }
+    }
+private static int divide(int Numerator,int Denominator) {
+        return Numerator/Denominator;
+    }
+}
+
+
+
+
+
+
+
+
+
+ODD AND EVEN
+public class OddEvenThread {
+    public static void main(String[] args) {
+        OddThread oddThread = new OddThread();
+        EvenThread evenThread = new EvenThread();
+        oddThread.start();
+        evenThread.start();
+    }
+}
+
+class OddThread extends Thread {
+    public void run() {
+        for(int i = 1; i < 20; i += 2) {
+            System.out.println("Odd: " + i);
+            try {
+                Thread.sleep(500);
+            } catch(InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+class EvenThread extends Thread {
+    public void run() {
+        for(int i = 2; i <= 20; i += 2) {
+            System.out.println("Even: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+INSERTING RAILWAY INFORMATION 
+
+import java.sql.*; 
+import java.util.Scanner; 
+public class INSERT { 
+    public static void main(String[] args) { 
+        try (Connection con = 
+DriverManager.getConnection("jdbc:mysql://localhost:3306/RailwayDB", 
+"username", "password"); 
+             PreparedStatement pstmt = con.prepareStatement("INSERT INTO 
+schedule (schedule_id  , station_id , train_no ) VALUES (?, ?, ?)"); 
+             Scanner scanner = new Scanner(System.in)) { 
+            System.out.print("Enter schedule id: "); 
+            String schedule_id = scanner.nextLine(); 
+            System.out.print("Enter station_id: "); 
+            String station_id = scanner.nextLine(); 
+            System.out.print("Enter train_no: "); 
+            int train_no = scanner.nextInt(); 
+            pstmt.setString(1, schedule_id); 
+            pstmt.setString(2, station_id); 
+            pstmt.setInt(3, train_no); 
+            pstmt.executeUpdate(); 
+            System.out.println("Data inserted successfully!"); 
+        } catch (SQLException e) { 
+            System.err.println("SQLException: " + e.getMessage()); 
+        } 
+    } 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+DISPLAYING RAILWAY INFORMATION
+import java.sql.*; 
+public class SELECT 
+{ 
+    public static void main(String[] args) 
+    { 
+        try 
+        { 
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Connection 
+con=DriverManager.getConnection("jdbc:mysql://localhost:3306/RailwayDB", 
+"username", "password"); 
+            Statement stmt=con.createStatement(); 
+            ResultSet rs=stmt.executeQuery("select * from schedule;"); 
+            System.out.println("The values in SCHEDULE table is :"); 
+            while (rs.next())  
+            { 
+                System.out.println("Schedule_id: " + rs.getString(1)); 
+                System.out.println("Station_id: " + rs.getString(2)); 
+                System.out.println("Train_no: " + rs.getString(3)); 
+ 
+            } 
+            con.close(); 
+        } 
+        catch(Exception e) 
+        { 
+            System.out.println(e); 
+        } 
+    } 
+} 
+
+
+
+
+
+
